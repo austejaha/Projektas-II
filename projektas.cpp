@@ -51,7 +51,7 @@ int suma(vector <int> nd);
 float vidurkis(vector <int> nd);
 //skaiciuoja mediana
 float mediana(vector <int> nd);
-//
+//pasirenka arba vidurki, arba mediana
 void vidMed(vector <studentas> &St);
 //skaiciuoja galutini bala
 float galutinis(float, int egz);
@@ -67,9 +67,9 @@ void spausdinimas(vector <studentas> St);
 void pagalbine(vector <studentas> &St);
 //tikrina pasirinkima (t/n) - taip/ne
 bool patvirtinimas();
-//
+//isrikiuoja studentu pavardes
 void rikiavimas(vector <studentas> &St);
-//
+//paglbine funkcija rikiavimui
 bool pavardLyginimas(studentas &a, studentas &b);
 
 int main()
@@ -107,7 +107,7 @@ void vidMed(vector <studentas> &St)
 
 void nuskaitymas(vector <studentas> &St)
 {
-    stringstream buffer; //irasoma i buferi ir iskart uzdaromas failas(nereikia laikyti atidarius)
+    stringstream buffer; 
     ifstream duom;
     duom.open("kursiokai.txt");
     buffer << duom.rdbuf();
@@ -189,23 +189,6 @@ void pagalbine(vector <studentas> &St)
         cout << "Ar norite ivesti dar vieno studento duomenis? (t/n) ";
         
     } while(patvirtinimas());
-
-    // cout << "Ar norite apskaiciuoti vidurki (kitu atveju bus skaiciuojama mediana)? (t/n) ";
-
-    // if(patvirtinimas())
-    // { 
-    //     for(int j = 0; j < St.size(); j++)
-    //     {
-    //         St[j].glt = galutinis(vidurkis(St[j].nd), St[j].egz);
-    //     }
-    // }
-    // else
-    // {
-    //     for(int j = 0; j < St.size(); j++)
-    //     {
-    //         St[j].glt = galutinis(mediana(St[j].nd), St[j].egz);
-    //     }
-    // }
     
 }
 
