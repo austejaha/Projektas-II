@@ -22,7 +22,6 @@ using std::vector;
 using std::left;
 using std::fixed;
 using std::ifstream;
-//using std::buffer;
 using std::stringstream;
 
 struct studentas 
@@ -76,6 +75,7 @@ bool pavardLyginimas(studentas &a, studentas &b);
 int main()
 {
     vector <studentas> St;
+    srand(time(0));
 
     cout << "Ar norite duomenis ivesti patys (kitu atveju duomenys bus nuskaityti is failo)? (t/n) ";
     if(patvirtinimas()) pagalbine(St);
