@@ -63,6 +63,7 @@ bool patvirtinimas();
 int main()
 {
     vector <studentas> St;
+    srand(time(0));
     pagalbine(St);
     spausdinimas(St);
     St.clear();
