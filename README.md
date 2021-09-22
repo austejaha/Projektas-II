@@ -9,7 +9,7 @@ Vartotojo paprašoma įvesti:
 * studento vardą ir pavardę;
 * studento namų darbų pažymius;
 * studento egzamino balą;
-* pasirinkti ar galutinis balas bus skaičiuojamas nuadojant vidurkį, ar medianą.
+* pasirinkti ar galutinis balas bus skaičiuojamas naudojant vidurkį, ar medianą.
 
 
 
