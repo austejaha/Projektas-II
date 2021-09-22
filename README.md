@@ -34,13 +34,14 @@ Pavardė2   Vardas2    9.99
 Pavardė3   Vardas3    3.67
  ```
 
-Galutinis balas yra apskaičiuojamas pagal formulę: ```galutinis = 0.4 * vidurkis + 0.6 * egzaminas ```.
+**Galutinis balas** yra apskaičiuojamas pagal formulę: ```galutinis = 0.4 * vidurkis + 0.6 * egzaminas ```.
 
 - - - 
 
 ## Įvedimo instrukcija ##
 
 Vartotojas po kiekvieno pažymio įvedimo turi paspausti *Enter*.
+
 Kai vartotojo prašoma pasirinkti, jis turi įvesti vieną iš nurodytų simbolių *(t/n)* - taip/ne.
 
 
