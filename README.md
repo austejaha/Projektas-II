@@ -102,9 +102,11 @@ Programa išmeta klaidą ir prašo pakartoti įvedimą šiais atvejais:
 
 
 ### Įdiegimas ####
-* Atsisiųskite norimą programos versiją (rekomenduojama atsisiųsti naujausią versiją) iš [Releases](https://github.com/austejaha/Projektas/releases) aplanko;
-* Išarchyvuokite parsisiųstą failą;
-* Paleiskite main.cpp programą naudojantis C++ IDE (pvz. CodeBlocks arba Visual Studio) arba per komandinę eilutę.
+* Atsisiųskite ir išarchyvuokite programą;
+* Paleiskite programą naudodami komandinę eilutę:
+```g++ -o main projektas.cpp
+   ./main
+   ```
 
 ### Versijos ###
 
