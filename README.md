@@ -65,6 +65,3 @@ Programa yra realizuota dviem būdais: su C tipo masyvais ir su vektoriais. Prog
 * Išarchyvuokite parsisiųstą failą;
 * Paleiskite main.cpp programą naudojantis C++ IDE (pvz. CodeBlocks arba Visual Studio) arba per komandinę eilutę.
 
-
-Versija:
-* [v0.1](https://github.com/austejaha/Projektas/tree/v0.1) - pirminė programos versija.
