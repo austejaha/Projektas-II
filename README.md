@@ -11,6 +11,22 @@ Vartotojo paprašoma įvesti:
 * studento egzamino balą;
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Vartotojas turi galimybę pasirinkti ###
+
+DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO ```kursiokai.txt```
+
+* Duomenų suvedimas rankiniu būdu:
+   * vartotojas įveda studentų vardus/pavardes;
+   * vartotojas įveda namų darbų pažymius;
+   * vartotojas įveda egzamino balus;
+   * vartotojas pasirenka kaip bus skaičiuojamas galutinis balas (naudojant vidurkį/medianą).
+
+* Duomenų nuskaitymas iš failo:
+   * programa nuskaito duomenis iš failo;
+   * vartotojas pasirenka kaip bus skaičiuojamas galutinis balas (naudojant vidurkį/medianą).
+
+
 -------------------------------------------------------------------------
 
 ### Vartotojas turi galimybę pasirinkti ###
@@ -24,6 +40,8 @@ NAMŲ DARBŲ PAŽYMIUS ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINIUS
 * Namų darbų pažymių atsitiktinis generavimas:
    * vartotojo yra paprašoma įvesti pažymių kiekį, pažymiai sugeneruojami.    
 
+
+
 EGZAMINO BALA ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINĮ
 
 * Egzamino balo įvedimas rankiniu būdu:
@@ -33,17 +51,26 @@ EGZAMINO BALA ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINĮ
 
 GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
+
+Programa surūšiuoja studentus pagal **pavardes**.
+
 -----------------------------------------------------------------------------------
 
 Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
+
 
 Rezultatų išvedimo į ekraną pavidalas:
 
  ```
 Pavardė    Vardas     Galutinis
 --------------------------------
-Pavardė1   Vardas1    8.50
-Pavardė2   Vardas2    9.99
+
+Pavardė1   Vardas2    8.50
+Pavardė2   Vardas1    9.99
 Pavardė3   Vardas3    3.67
  ```
 
@@ -70,7 +97,9 @@ Programa išmeta klaidą ir prašo pakartoti įvedimą šiais atvejais:
 
 ## Apie programą ##
 
-Programa yra realizuota dviem būdais: naudojant ```C``` tipo masyvą - **masyvas.cpp** ir ```<vector>``` tipo konteinerį - **vektorius.cpp**.
+
+
+
 
 ### Įdiegimas ####
 * Atsisiųskite norimą programos versiją (rekomenduojama atsisiųsti naujausią versiją) iš [Releases](https://github.com/austejaha/Projektas/releases) aplanko;
@@ -78,5 +107,8 @@ Programa yra realizuota dviem būdais: naudojant ```C``` tipo masyvą - **masyva
 * Paleiskite main.cpp programą naudojantis C++ IDE (pvz. CodeBlocks arba Visual Studio) arba per komandinę eilutę.
 
 ### Versijos ###
-* [v0.1](https://github.com/austejaha/Projektas/tree/v0.1) - pirminė programos versija.
+
+* [v0.1](https://github.com/austejaha/Projektas/tree/v0.1) Pirminė programos versija. Programa yra realizuota dviem būdais: naudojant ```C``` tipo masyvą - **masyvas.cpp** ir ```<vector>``` tipo konteinerį - **vektorius.cpp**. 
+* [v0.2](https://github.com/austejaha/Projektas/tree/v0.2) Pridėta nuskaitymo iš tekstinio failo funkcija. Programa realizuota naudojant ```<vector>``` tipo konteinerį. 
+
 
