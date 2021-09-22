@@ -82,11 +82,12 @@ Programa išmeta klaidą ir prašo pakartoti įvedimą šiais atvejais:
 
 ## Apie programą ##
 
-Programa yra realizuota dviem būdais: su C tipo masyvais ir su vektoriais. Programa su C tipo masyvais saugoma **masyvas.cpp**, o su vektoriais - **vektorius.cpp**.
-
-
-Įdiegimas:
+### Įdiegimas ####
 * Atsisiųskite norimą programos versiją (rekomenduojama atsisiųsti naujausią versiją) iš [Releases](https://github.com/austejaha/Projektas/releases) aplanko;
 * Išarchyvuokite parsisiųstą failą;
 * Paleiskite main.cpp programą naudojantis C++ IDE (pvz. CodeBlocks arba Visual Studio) arba per komandinę eilutę.
+
+### Versijos ###
+* [v0.1](https://github.com/austejaha/Projektas/tree/v0.1) Pirminė programos versija. Programa yra realizuota dviem būdais: naudojant ```C``` tipo masyvą ir ```<vector>``` tipo konteinerį. Programa su C tipo masyvais saugoma **masyvas.cpp**, o su vektoriais - **vektorius.cpp**. 
+* [v0.2](https://github.com/austejaha/Projektas/tree/v0.2) Pridėta nuskaitymo iš tekstinio failo funkcija. Programa realizuota naudojant ```<vector>``` tipo konteinerį. 
 
