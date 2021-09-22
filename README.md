@@ -104,7 +104,8 @@ Programa išmeta klaidą ir prašo pakartoti įvedimą šiais atvejais:
 ### Įdiegimas ####
 * Atsisiųskite ir išarchyvuokite programą;
 * Paleiskite programą naudodami komandinę eilutę:
-```g++ -o main projektas.cpp
+```
+   g++ -o main projektas.cpp
    ./main
    ```
 
