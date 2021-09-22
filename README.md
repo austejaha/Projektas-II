@@ -26,11 +26,6 @@ DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO ```kursiokai.txt```
    * programa nuskaito duomenis iš failo;
    * vartotojas pasirenka kaip bus skaičiuojamas galutinis balas (naudojant vidurkį/medianą).
 
-
--------------------------------------------------------------------------
-
-### Vartotojas turi galimybę pasirinkti ###
-
 NAMŲ DARBŲ PAŽYMIUS ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINIUS
 
 * Namų darbų pažymių įvedimas rankiniu būdu:
