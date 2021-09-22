@@ -16,6 +16,7 @@ Vartotojo paprašoma įvesti:
 ### Vartotojas turi galimybę pasirinkti ###
 
 Namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius
+
 * namų darbų pažymių įvedimas rankiniu būdu:
  * vartotojas nurodo, ar nori įvesti namų darbų pažymių kiekį:
   * **jei taip**, įveda norimą kiekį;
@@ -24,6 +25,7 @@ Namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius
  * vartotojo yra paprašoma įvesti pažymių kiekį, pažymiai sugeneruojami.    
 
 Egzamino balą įvesti rankiniu būdu/sugeneruoti atsitiktinį
+
 * egzamino balo įvedimas rankiniu būdu:
  * vartotojas pats įveda norimą balą.
 * egzamino balo atsitiktinis generavimas:
