@@ -13,16 +13,25 @@ Vartotojo paprašoma įvesti:
 
 
 
-Vartotojas turi galimybę pasirinkti:
-* namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius;
-  * namų darbų pažymių įvedimas rankiniu būdu:
-    * vartotojas nurodo, ar nori įvesti namų darbų pažymių kiekį:
-      * jei taip, įveda norimą kiekį;
-      * jei ne, įvedus pažymį klausiama, ar vartotojas nori įvesti dar vieną pažymį (taip kartojama tol, kol vartotojas nusprendžia, jog dar vieno pažymio įvesti nebenori).
-  * namų darbų pažymių atsitiktinis generavimas:
-    * vartotojo yra paprašoma įvesti pažymių kiekį;    
-* egzamino balą įvesti rankiniu būdu/sugeneruoti atsitiktinį;
-* galutinį balą skaičiuoti naudojant vidurkį/medianą.
+### Vartotojas turi galimybę pasirinkti ###
+
+Namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius
+* namų darbų pažymių įvedimas rankiniu būdu:
+ * vartotojas nurodo, ar nori įvesti namų darbų pažymių kiekį:
+  * **jei taip**, įveda norimą kiekį;
+  * **jei ne**, įvedus pažymį klausiama, ar vartotojas nori įvesti dar vieną pažymį (taip kartojama tol, kol vartotojas nusprendžia, jog dar vieno pažymio įvesti nebenori).
+* namų darbų pažymių atsitiktinis generavimas:
+ * vartotojo yra paprašoma įvesti pažymių kiekį, pažymiai sugeneruojami.    
+
+Egzamino balą įvesti rankiniu būdu/sugeneruoti atsitiktinį
+* egzamino balo įvedimas rankiniu būdu:
+ * vartotojas pats įveda norimą balą.
+* egzamino balo atsitiktinis generavimas:
+ * egzamino balas yra sugeneruojamas pačios programos. 
+
+Galutinį balą skaičiuoti naudojant vidurkį/medianą
+
+Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
 
 Rezultatų išvedimo į ekraną pavidalas:
 
