@@ -9,10 +9,8 @@ Vartotojo paprašoma įvesti:
 * studento vardą ir pavardę;
 * studento namų darbų pažymius;
 * studento egzamino balą;
-* pasirinkti ar galutinis balas bus skaičiuojamas naudojant vidurkį, ar medianą.
 
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Vartotojas turi galimybę pasirinkti ###
 
 DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO ```kursiokai.txt```
@@ -27,7 +25,7 @@ DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO ```kursiokai.txt```
    * programa nuskaito duomenis iš failo;
    * vartotojas pasirenka kaip bus skaičiuojamas galutinis balas (naudojant vidurkį/medianą).
 
-Namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius
+NAMŲ DARBŲ PAŽYMIUS ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINIUS
 
 * Namų darbų pažymių įvedimas rankiniu būdu:
    * vartotojas nurodo, ar nori įvesti namų darbų pažymių kiekį:
@@ -35,15 +33,17 @@ Namų darbų pažymius įvesti rankiniu būdu/sugeneruoti atsitiktinius
       * **jei ne**, įvedus pažymį klausiama, ar vartotojas nori įvesti dar vieną pažymį (taip kartojama tol, kol vartotojas nusprendžia, jog dar vieno pažymio įvesti nebenori).
 * Namų darbų pažymių atsitiktinis generavimas:
    * vartotojo yra paprašoma įvesti pažymių kiekį, pažymiai sugeneruojami.    
-
-Egzamino balą įvesti rankiniu būdu/sugeneruoti atsitiktinį
+  
+EGZAMINO BALA ĮVESTI RANKINIU BŪDU/SUGENERUOTI ATSITIKTINĮ
 
 * Egzamino balo įvedimas rankiniu būdu:
    * vartotojas pats įveda norimą balą.
 * Egzamino balo atsitiktinis generavimas:
    * egzamino balas yra sugeneruojamas pačios programos. 
 
-Galutinį balą skaičiuoti naudojant vidurkį/medianą
+GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
 
