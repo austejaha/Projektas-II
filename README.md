@@ -47,13 +47,15 @@ Galutinį balą skaičiuoti naudojant vidurkį/medianą
 
 Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
 
+Programa surūšiuoja studentus pagal **pavardes**.
+
 Rezultatų išvedimo į ekraną pavidalas:
 
  ```
 Pavardė    Vardas     Galutinis
 --------------------------------
-Pavardė1   Vardas1    8.50
-Pavardė2   Vardas2    9.99
+Pavardė1   Vardas2    8.50
+Pavardė2   Vardas1    9.99
 Pavardė3   Vardas3    3.67
  ```
 
