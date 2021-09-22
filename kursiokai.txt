@@ -1,0 +1,7 @@
+Pavarde                   Vardas                    ND1       ND2       ND3       ND4       ND5     Egz.
+Rastinys                  Medis                     8         5         8         3         7       2
+Vynuogele                 Asta                      4        10         2         6         3      10 
+Monitorinis               Lukas                     6         4         7         6         5       7
+Labukas                   Labatytis                 8         5         5         7         9       8
+Kauniskas                 Jonas                     9         7         9        10         4       9
+Juodyte                   Laura                     9         8         5         3         6       2 
