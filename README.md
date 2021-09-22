@@ -26,11 +26,13 @@ Vartotojas turi galimybę pasirinkti:
 
 Rezultatų išvedimo į ekraną pavidalas:
 
+ ```
 Pavardė    Vardas     Galutinis
 --------------------------------
 Pavardė1   Vardas1    8.50
 Pavardė2   Vardas2    9.99
 Pavardė3   Vardas3    3.67
+ ```
 
 Galutinis balas yra apskaičiuojamas pagal formulę: ```galutinis = 0.4 * vidurkis + 0.6 * egzaminas ```.
 
