@@ -3,29 +3,30 @@
 void vidMed(vector <studentas> &St)
 {
     cout << "Ar norite apskaiciuoti vidurki (kitu atveju bus skaiciuojama mediana)? (t/n) ";
-
+    long dydis = St.size();
     if(patvirtinimas())
     { 
-        for(int j = 0; j < St.size(); j++)
+        for(long int j = 0; j < dydis; j++)
         {
             St[j].glt = galutinis(vidurkis(St[j].nd), St[j].egz);
         }
     }
     else
     {
-        for(int j = 0; j < St.size(); j++)
+        for(long int j = 0; j < dydis; j++)
         {
             St[j].glt = galutinis(mediana(St[j].nd), St[j].egz);
         }
     }
 }
 
-void nuskaitymas(vector <studentas> &St)
+void nuskaitymas(vector <studentas> &St, string failas)
 {
     stringstream buffer;
     ifstream duom;
+    pradzia = std::chrono::steady_clock::now();
     try{ //tikrina
-    duom.open("kursiokai.txt");
+    duom.open(failas);
     if(!duom) throw 1; //jei nera studenu ismeta is programos
     buffer << duom.rdbuf();
     duom.close();
@@ -41,6 +42,7 @@ void nuskaitymas(vector <studentas> &St)
         int paz;
         while(duom >> paz) 
         {   if(paz > 10 || paz < 1 ) throw 2;
+            // else if(!isdigit(paz)) throw 3;
             else S.nd.push_back(paz);
         }
         if(S.nd.size() == 0) throw 3;
@@ -70,6 +72,9 @@ void nuskaitymas(vector <studentas> &St)
 
         exit(0);
     }
+
+    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
+    cout << endl <<"Sugaistas laikas duomenims nuskaityti: " << pabaiga << " s" << endl << endl;  
 
 }
 
@@ -223,7 +228,7 @@ bool skTikrinimas(string laik)
         else if (teisingas == true && (stoi(laik) < 1 || stoi(laik) > 10))
         {
             teisingas = false;
-            cout << "Klaida! Skaicius turi is intervalo [1-10]" << endl;
+            cout << "Klaida! Skaicius turi buti is intervalo [1-10]" << endl;
         }
         
     }
@@ -295,9 +300,9 @@ int atsitiktiniai()
 int ilgPavarde(vector <studentas> St)
 {
     int max = 0;
-    int ilgis = St.size();
+    long int ilgis = St.size();
     
-    for(int i = 0; i < ilgis; i++)
+    for(long int i = 0; i < ilgis; i++)
     {
         if(St[i].pavard.length() > max)
         max = St[i].pavard.length();
@@ -309,9 +314,9 @@ int ilgPavarde(vector <studentas> St)
 int ilgVardas(vector <studentas> St)
 {
     int max = 0;
-    int ilgis = St.size();
+    long int ilgis = St.size();
     
-    for(int i = 0; i < ilgis; i++)
+    for(long int i = 0; i < ilgis; i++)
     {
         if(St[i].vard.length() > max)
         max = St[i].vard.length();
@@ -330,21 +335,123 @@ bool pavardLyginimas(studentas &a, studentas &b)
     return a.pavard < b.pavard;
 }
 
-void spausdinimas(vector <studentas> St)
+void spausdinimas(vector <studentas> St, string failas)
 {
     rikiavimas(St);
-    int ilgis = St.size(); 
+    ofstream out (failas);
+    long int ilgis = St.size(); 
     string pnktr = "";
     int maxpavard = ilgPavarde(St);
     int maxvard = ilgVardas(St);
     pnktr.append(maxpavard + maxvard + 30, '-'); 
-    cout << left << setw(maxpavard + 10) << "Pavarde" << setw(maxvard + 10) << "Vardas" << "Galutinis" << endl; 
-    cout << pnktr << endl;
+    pradzia = std::chrono::steady_clock::now();
+    out << left << setw(maxpavard + 10) << "Pavarde" << setw(maxvard + 10) << "Vardas" << "Galutinis" << endl; 
+    out << pnktr << endl;
 
-    for(int i = 0; i < ilgis; i++)
+    for(long int i = 0; i < ilgis; i++)
     {
-        cout << left << setw(maxpavard + 10) << St[i].pavard << setw(maxvard + 10) << St[i].vard << fixed << setprecision(2) << St[i].glt << endl;
+        out << left << setw(maxpavard + 10) << St[i].pavard << setw(maxvard + 10) << St[i].vard << fixed << setprecision(2) << St[i].glt << endl;
 
     }
+
+    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
+    cout << endl <<"Sugaistas laikas duomenims (" <<failas <<") isvesti: " << pabaiga << " s" << endl << endl;  
+}
+
+int pasirinkimas()
+{
+    cout << "Kuri faila norite naudoti? (1 - 5)" << endl;
+    cout << "1 - studentai1000.txt; " << endl << "2 - studentai10000.txt;" << endl << "3 - studentai100000.txt;" 
+    << endl << "4 - studentai1000000.txt;" << endl << "5 - studentai10000000.txt;" << endl;
+    int skaicius = skIvedimas();
+    return skaicius;
+}
+
+
+bool skGenTikrinimas(string laik) 
+{
+    bool teisingas = true;
+
+    for (int i = 0; i < laik.length(); i++) 
+    {
+        if (!isdigit(laik[i]))
+        {
+            teisingas = false;
+            cout << "Klaida! Turite ivesti skaiciu" << endl;
+            break;
+        }
+        else if (teisingas == true && (stoi(laik) < 1 || stoi(laik) > 5))
+        {
+            teisingas = false;
+            cout << "Klaida! Skaicius turi buti is intervalo [1-5]" << endl;
+        }
+        
+    }
+
+    return teisingas;
+}
+
+int skIvedimas()
+{
+    string kint;
+    bool laik;
+    do 
+    {
+        cout << "Iveskite skaiciu: ";
+        cin >> kint;
+        laik = skGenTikrinimas(kint);
+    } while (!laik);
+
+    int skaicius = stoi(kint);
+
+    return skaicius;
+}
+
+void generavimas(int sk, string &failas)
+{
+    long n;
+    if(sk == 1) n = 1000;
+    else if(sk == 2) n = 10000;
+    else if(sk == 3) n = 100000;
+    else if(sk == 4) n = 1000000;
+    else if(sk == 5) n = 10000000;
+
+    failas = "studentai" + to_string(n) + ".txt";
+    
+    pradzia = std::chrono::steady_clock::now();
+    ofstream out(failas); //i kur isvesti faila
+    out << "Pavarde" << setw(20) << "Vardas" << setw(13);
+    for (int i = 0; i < 10; i++) out << "ND" + to_string(i + 1) << setw(8);
+    out << "Egz" << endl;
+
+    for(long int i = 0; i < n; i++)
+    {
+        out << "Pavarde" + to_string(i + 1);
+        out << setw(20) << "Vardas" + to_string(i + 1) << setw(10);
+        for(int j = 0; j <= 10; j++) out << atsitiktiniai() <<setw(8);
+        out << endl;
+    }
+
+    out.close();  
+
+    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
+    cout << endl <<"Sugaistas laikas failams sugeneruoti: " << pabaiga << " s" << endl << endl;  
+    
+
+}
+
+void skirstymas(vector <studentas> St, vector <studentas> &Idiotai, vector <studentas> &Genijai)
+{
+    long int n = St.size();
+    pradzia = std::chrono::steady_clock::now();
+
+    for (long int i = 0; i < n; i ++)
+    {
+        if(St[i].glt < 5) Idiotai.push_back(St[i]);
+        else Genijai.push_back(St[i]);
+    }
+
+    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
+    cout << endl <<"Sugaistas laikas studentams suskirstyti: " << pabaiga << " s" << endl << endl;  
 }
 

@@ -9,6 +9,9 @@
 #include <time.h> 
 #include <fstream>
 #include <sstream>
+#include <chrono>
+
+static std::chrono::steady_clock::time_point pradzia;
 
 using std::cout;
 using std::cin;
@@ -23,6 +26,8 @@ using std::left;
 using std::fixed;
 using std::ifstream;
 using std::stringstream; 
+using std::ofstream;
+using std::to_string;
 
 struct studentas 
 {
@@ -34,12 +39,12 @@ struct studentas
 };
 
 //nuskaito duomenis is failo
-void nuskaitymas(vector <studentas> &St);
+void nuskaitymas(vector <studentas> &St, string failas);
 //tikrina ar ivesta varda/pavarde sudaro tik raides
 bool vardTikrinimas(string kint);
 //ivedami duomenis, jei neteisingi - prasoma ivesti is naujo
 string vardIvedimas(string ivedimas);
-////tikrina ar ivestas skaicius
+//tikrina ar ivestas skaicius
 bool skKiekioTikrinimas(string laik);
 //tikrina ar ivestas skaicius/ar priklauso intervalui [1-10]
 bool skTikrinimas(string laik);
@@ -62,7 +67,7 @@ int ilgPavarde(vector <studentas> St);
 //randa ilgiausia studento varda
 int ilgVardas(vector <studentas> St);
 //duomenu spausdinimui skirta funkcija
-void spausdinimas(vector <studentas> St);
+void spausdinimas(vector <studentas> St, string failas);
 //pagalbine funkcija
 void pagalbine(vector <studentas> &St);
 //tikrina pasirinkima (t/n) - taip/ne
@@ -71,3 +76,13 @@ bool patvirtinimas();
 void rikiavimas(vector <studentas> &St);
 //paglbine funkcija rikiavimui
 bool pavardLyginimas(studentas &a, studentas &b);
+//generuoja failus
+void generavimas(int sk, string &failas);
+//leidzia pasirinkti kokio dydzio failas bus generuojamas
+int pasirinkimas();
+//ivedami duomenis, jei neteisingi - prasoma ivesti is naujo
+int skIvedimas();
+//tikrina ar ivestas skaicius/ar priklauso intervalui [1-5]
+bool skGenTikrinimas(string laik);
+//skirsto studentus i grupes
+void skirstymas(vector <studentas> St, vector <studentas> &Idiotai, vector <studentas> &Genijai);
