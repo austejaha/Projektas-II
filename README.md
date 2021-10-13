@@ -96,16 +96,16 @@ Sistema nutraukia darbą šiais atvejais:
 
 ## Programos veikimo greičio (spartos) analizė ##
 
- ```                                      
+                                    
 
-Laikas       |   1000   |  10000  | 1000000 | 10000000 | 10000000
------------- | -------- | ------- | ------- | -------- | --------- 
-Generavimas  | 0.004 s  | 0.04 s  | 0.414 s | 4.042 s  | 40.884 s 
-Nuskaitymas  | 0.015 s  | 0.05 s  | 0.407 s | 3.992 s  | 50.174 s
-Rūšiavimas   | 0 s      | 0.003 s | 0.027 s | 0.293 s  | 8.33 s
-Išvedimas    | 0.003 s  | 0.038 s | 0.386 s | 3.834 s  | 38.212 s
-Bendras      | 0.022 s  | 0.131 s | 1.234 s | 12.161 s | 137.6 s
- ```
+| Laikas       |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| Generavimas  | 0.004 s  | 0.04 s  | 0.414 s | 4.042 s  | 40.884 s 
+| Nuskaitymas  | 0.015 s  | 0.05 s  | 0.407 s | 3.992 s  | 50.174 s
+| Rūšiavimas   | 0 s      | 0.003 s | 0.027 s | 0.293 s  | 8.33 s
+| Išvedimas    | 0.003 s  | 0.038 s | 0.386 s | 3.834 s  | 38.212 s
+| Bendras      | 0.022 s  | 0.131 s | 1.234 s | 12.161 s | 137.6 s
+
 
 Išvedimo laikas skaičiuojamas susumavus idiotai.txt ir genijai.txt išvedimo laiką
   
