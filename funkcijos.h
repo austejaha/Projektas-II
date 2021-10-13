@@ -29,7 +29,6 @@ using std::stringstream;
 using std::ofstream;
 using std::to_string;
 
-
 struct studentas 
 {
     string vard;
