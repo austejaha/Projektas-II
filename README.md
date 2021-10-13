@@ -107,7 +107,7 @@ Sistema nutraukia darbą šiais atvejais:
 | Bendras      | 0.022 s  | 0.131 s | 1.234 s | 12.161 s | 137.6 s
 
 
-Išvedimo laikas skaičiuojamas susumavus idiotai.txt ir genijai.txt išvedimo laiką
+Išvedimo laikas skaičiuojamas susumavus ```idiotai.txt``` ir ```genijai.txt``` išvedimo laiką
   
 - - -
 
