@@ -14,7 +14,7 @@ Vartotojo paprašoma įvesti:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Vartotojas turi galimybę pasirinkti ###
 
-DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO ```kursiokai.txt```
+DUOMENIS SUVESTI RANKINIU BŪDU/NUSKAITYTI IŠ FAILO
 
 * Duomenų suvedimas rankiniu būdu:
    * vartotojas įveda studentų vardus/pavardes;
