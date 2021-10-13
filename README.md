@@ -7,8 +7,8 @@ Programa skirta apskaičiuoti kiekvieno studento galutinį balą panaudojant vid
 
 Vartotojo paprašoma įvesti:
 * studento vardą ir pavardę;
-* studento namų darbų pažymius;
-* studento egzamino balą;
+* studento namų darbų pažymius (galima sugeneruoti);
+* studento egzamino balą (galima sugeneruoti).
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
