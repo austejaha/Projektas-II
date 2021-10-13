@@ -41,7 +41,6 @@ void nuskaitymas(vector <studentas> &St)
         int paz;
         while(duom >> paz) 
         {   if(paz > 10 || paz < 1 ) throw 2;
-            // else if(!isdigit(paz)) throw 3;
             else S.nd.push_back(paz);
         }
         if(S.nd.size() == 0) throw 3;
