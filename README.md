@@ -53,11 +53,6 @@ GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
 
 Programa surūšiuoja studentus pagal **pavardes**.
 
------------------------------------------------------------------------------------
-
-Įvedus visus prašomus duomenis, vartotojas nurodo, ar nori įtraukti dar vieną studentą. Programa kartojama tol, kol vartotojas nusprendžia, kad daugiau studentų įvesti nebenori.
-
-
 Rezultatų išvedimo į ekraną pavidalas:
 
  ```
