@@ -25,7 +25,7 @@ void nuskaitymas(vector <studentas> &St, string failas)
     stringstream buffer;
     ifstream duom;
     pradzia = std::chrono::steady_clock::now();
-    try{ //tikrina
+    try{ 
     duom.open(failas);
     if(!duom) throw 1; 
     buffer << duom.rdbuf();
