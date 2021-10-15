@@ -27,7 +27,7 @@ void nuskaitymas(vector <studentas> &St, string failas)
     pradzia = std::chrono::steady_clock::now();
     try{ //tikrina
     duom.open(failas);
-    if(!duom) throw 1; //jei nera studenu ismeta is programos
+    if(!duom) throw 1; 
     buffer << duom.rdbuf();
     duom.close();
     string eil;
@@ -42,7 +42,6 @@ void nuskaitymas(vector <studentas> &St, string failas)
         int paz;
         while(duom >> paz) 
         {   if(paz > 10 || paz < 1 ) throw 2;
-            // else if(!isdigit(paz)) throw 3;
             else S.nd.push_back(paz);
         }
         if(S.nd.size() == 0) throw 3;
@@ -52,7 +51,7 @@ void nuskaitymas(vector <studentas> &St, string failas)
         St.push_back(S);
         S.nd.clear();
     }
-    }catch (int e) //erroro skaicius
+    }catch (int e) 
     {
         switch(e)
         {
