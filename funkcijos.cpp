@@ -418,7 +418,7 @@ void generavimas(int sk, string &failas)
     failas = "studentai" + to_string(n) + ".txt";
     
     pradzia = std::chrono::steady_clock::now();
-    ofstream out(failas); //i kur isvesti faila
+    ofstream out(failas); 
     out << "Pavarde" << setw(20) << "Vardas" << setw(13);
     for (int i = 0; i < 10; i++) out << "ND" + to_string(i + 1) << setw(8);
     out << "Egz" << endl;
