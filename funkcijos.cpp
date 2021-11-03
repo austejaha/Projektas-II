@@ -25,7 +25,7 @@ void nuskaitymas(vector <studentas> &St, string failas)
     stringstream buffer;
     ifstream duom;
     pradzia = std::chrono::steady_clock::now();
-    try{
+    try{ 
     duom.open(failas);
     if(!duom) throw 1; 
     buffer << duom.rdbuf();
@@ -343,7 +343,6 @@ void spausdinimas(vector <studentas> St, string failas)
     int maxpavard = ilgPavarde(St);
     int maxvard = ilgVardas(St);
     pnktr.append(maxpavard + maxvard + 30, '-'); 
-    pradzia = std::chrono::steady_clock::now();
     out << left << setw(maxpavard + 10) << "Pavarde" << setw(maxvard + 10) << "Vardas" << "Galutinis" << endl; 
     out << pnktr << endl;
 
@@ -353,8 +352,6 @@ void spausdinimas(vector <studentas> St, string failas)
 
     }
 
-    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
-    cout << endl <<"Sugaistas laikas duomenims (" <<failas <<") isvesti: " << pabaiga << " s" << endl << endl;  
 }
 
 int pasirinkimas()
@@ -417,8 +414,7 @@ void generavimas(int sk, string &failas)
 
     failas = "studentai" + to_string(n) + ".txt";
     
-    pradzia = std::chrono::steady_clock::now();
-    ofstream out(failas); 
+    ofstream out(failas);
     out << "Pavarde" << setw(20) << "Vardas" << setw(13);
     for (int i = 0; i < 10; i++) out << "ND" + to_string(i + 1) << setw(8);
     out << "Egz" << endl;
@@ -432,9 +428,6 @@ void generavimas(int sk, string &failas)
     }
 
     out.close();  
-
-    double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
-    cout << endl <<"Sugaistas laikas failams sugeneruoti: " << pabaiga << " s" << endl << endl;  
     
 
 }
