@@ -326,13 +326,9 @@ int ilgVardas(vector <studentas> St)
 
 void rikiavimas(vector <studentas> &St)
 {
-    sort(St.begin(), St.end(), pavardLyginimas);
+    sort(St.begin(), St.end(), lyginimasPavard());
 }
 
-bool pavardLyginimas(studentas &a, studentas &b)
-{
-    return a.pavard < b.pavard;
-}
 
 void spausdinimas(vector <studentas> St, string failas)
 {
@@ -348,8 +344,8 @@ void spausdinimas(vector <studentas> St, string failas)
 
     for(long int i = 0; i < ilgis; i++)
     {
-        out << left << setw(maxpavard + 10) << St[i].pavard << setw(maxvard + 10) << St[i].vard << fixed << setprecision(2) << St[i].glt << endl;
-
+        out << left << setw(maxpavard + 10) << St.back().pavard << setw(maxvard + 10) << St.back().vard << fixed << setprecision(2) << St.back().glt << endl;
+        St.pop_back();
     }
 
 }
@@ -432,16 +428,13 @@ void generavimas(int sk, string &failas)
 
 }
 
-void skirstymas(vector <studentas> St, vector <studentas> &Idiotai, vector <studentas> &Genijai)
+void skirstymas(vector <studentas> &St, vector <studentas> &Genijai)
 {
     long int n = St.size();
     pradzia = std::chrono::steady_clock::now();
 
-    for (long int i = 0; i < n; i ++)
-    {
-        if(St[i].glt < 5) Idiotai.push_back(St[i]);
-        else Genijai.push_back(St[i]);
-    }
+    copy_if(St.begin(), St.end(), back_inserter(Genijai), [](studentas const& St) {return St.glt >= 5;});
+    St.erase(remove_if(St.begin(), St.end(), [](studentas const& St) {return St.glt >= 5;}),St.end());
 
     double pabaiga = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - pradzia).count() / 1000.0;
     cout << endl <<"Sugaistas laikas studentams suskirstyti: " << pabaiga << " s" << endl << endl;  
