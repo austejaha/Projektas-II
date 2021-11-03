@@ -11,6 +11,7 @@
 #include <sstream>
 #include <chrono>
 
+
 static std::chrono::steady_clock::time_point pradzia;
 
 using std::cout;
@@ -29,6 +30,7 @@ using std::stringstream;
 using std::ofstream;
 using std::to_string;
 
+
 struct studentas 
 {
     string vard;
@@ -36,6 +38,10 @@ struct studentas
     vector <int> nd;
     int egz;
     float glt;
+};
+
+struct lyginimasPavard{
+    bool operator()(const studentas& a, const studentas& b){return(b.pavard.compare(a.pavard));}
 };
 
 //nuskaito duomenis is failo
@@ -74,15 +80,13 @@ void pagalbine(vector <studentas> &St);
 bool patvirtinimas();
 //isrikiuoja studentu pavardes
 void rikiavimas(vector <studentas> &St);
-//paglbine funkcija rikiavimui
-bool pavardLyginimas(studentas &a, studentas &b);
 //generuoja failus
 void generavimas(int sk, string &failas);
 //leidzia pasirinkti kokio dydzio failas bus generuojamas
 int pasirinkimas();
 //ivedami duomenis, jei neteisingi - prasoma ivesti is naujo
 int skIvedimas();
-//tikrina ar ivestas skaicius/ar priklauso intervalui [1-5]
+//tikrina generavimui ivesta skaiciu
 bool skGenTikrinimas(string laik);
-//skirsto studentus i grupes
-void skirstymas(vector <studentas> St, vector <studentas> &Idiotai, vector <studentas> &Genijai);
+//isskirsto studentus pagal galutini bala
+void skirstymas(vector <studentas> &St, vector <studentas> &Genijai);
