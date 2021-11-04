@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <chrono>
+#include <list>
 
 
 static std::chrono::steady_clock::time_point pradzia;
@@ -29,6 +30,7 @@ using std::ifstream;
 using std::stringstream; 
 using std::ofstream;
 using std::to_string;
+using std::list;
 
 
 struct studentas 
@@ -45,7 +47,7 @@ struct lyginimasPavard{
 };
 
 //nuskaito duomenis is failo
-void nuskaitymas(vector <studentas> &St, string failas);
+void nuskaitymas(list <studentas> &St, string failas);
 //tikrina ar ivesta varda/pavarde sudaro tik raides
 bool vardTikrinimas(string kint);
 //ivedami duomenis, jei neteisingi - prasoma ivesti is naujo
@@ -63,23 +65,23 @@ float vidurkis(vector <int> nd);
 //skaiciuoja mediana
 float mediana(vector <int> nd);
 //pasirenka arba vidurki, arba mediana
-void vidMed(vector <studentas> &St);
+void vidMed(list <studentas> &St);
 //skaiciuoja galutini bala
 float galutinis(float, int egz);
 //sugeneruoja atsitiktinius duomenis
 int atsitiktiniai();
 //randa ilgiausia studento pavarde
-int ilgPavarde(vector <studentas> St);
+int ilgPavarde(list <studentas> St);
 //randa ilgiausia studento varda
-int ilgVardas(vector <studentas> St);
+int ilgVardas(list <studentas> St);
 //duomenu spausdinimui skirta funkcija
-void spausdinimas(vector <studentas> St, string failas);
+void spausdinimas(list <studentas> St, string failas);
 //pagalbine funkcija
-void pagalbine(vector <studentas> &St);
+void pagalbine(list <studentas> &St);
 //tikrina pasirinkima (t/n) - taip/ne
 bool patvirtinimas();
 //isrikiuoja studentu pavardes
-void rikiavimas(vector <studentas> &St);
+void rikiavimas(list <studentas> &St);
 //generuoja failus
 void generavimas(int sk, string &failas);
 //leidzia pasirinkti kokio dydzio failas bus generuojamas
@@ -89,4 +91,4 @@ int skIvedimas();
 //tikrina generavimui ivesta skaiciu
 bool skGenTikrinimas(string laik);
 //isskirsto studentus pagal galutini bala
-void skirstymas(vector <studentas> &St, vector <studentas> &Genijai);
+void skirstymas(list <studentas> &St, list <studentas> &Genijai);
