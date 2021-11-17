@@ -160,5 +160,6 @@ III - oji strategija.
 * [v0.3](https://github.com/austejaha/Projektas/tree/v0.3) Pridėtas išimčių valdymas (angl. Exception Handling). Funkcijos išskirstytos į failus.
 * [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```idiotai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
 * [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```deque```, ```list```). Atlikta ir aprašyta spartos analizė.
+* [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
 
 
