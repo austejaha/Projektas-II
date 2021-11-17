@@ -59,7 +59,7 @@ GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
 
 Programa surūšiuoja studentus pagal **pavardes**.
 
-Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargšaai.txt``` ir ```genijai.txt```.
+Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargšai.txt``` ir ```genijai.txt```.
 
 Rezultatų išvedimo į failą pavidalas:
 
