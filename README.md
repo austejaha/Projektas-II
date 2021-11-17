@@ -10,6 +10,11 @@ Vartotojo paprašoma įvesti:
 * studento namų darbų pažymius (galima sugeneruoti);
 * studento egzamino balą (galima sugeneruoti).
 
+Naudojami 2 konteineriai:
+
+* ```vector```;
+* ```list```.
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Vartotojas turi galimybę pasirinkti ###
@@ -54,7 +59,7 @@ GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
 
 Programa surūšiuoja studentus pagal **pavardes**.
 
-Programa surūšiuoja studentus į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```idiotai.txt``` ir ```genijai.txt```.
+Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargšaai.txt``` ir ```genijai.txt```.
 
 Rezultatų išvedimo į failą pavidalas:
 
@@ -96,18 +101,41 @@ Sistema nutraukia darbą šiais atvejais:
 
 ## Programos veikimo greičio (spartos) analizė ##
 
-                                    
+* AMD Ryzen 5 4500U with Radeon Graphics 2.38 GHz procesorius
+* 8 GB RAM
+* 256 GB SSD
+                   
+
+Duomenų nuskaitymas
 
 |              |   1000   |  10000  | 1000000 | 10000000 | 10000000
 | ------------ | -------- | ------- | ------- | -------- | --------- 
-| Generavimas  | 0.004 s  | 0.04 s  | 0.414 s | 4.042 s  | 40.884 s 
-| Nuskaitymas  | 0.015 s  | 0.05 s  | 0.407 s | 3.992 s  | 50.174 s
-| Rūšiavimas   | 0 s      | 0.003 s | 0.027 s | 0.293 s  | 8.33 s
-| Išvedimas    | 0.003 s  | 0.038 s | 0.386 s | 3.834 s  | 38.212 s
-| Bendras      | 0.022 s  | 0.131 s | 1.234 s | 12.161 s | 137.6 s
+| vector       | 0.027 s  | 0.083 s | 0.726 s | 5.704 s  | 62.679 s
+| list         | 0.035 s  | 0.086 s | 0.733 s | 5.956 s  | 44.69 s
 
+Duomenų rūšiavimas
 
-Išvedimo laikas skaičiuojamas susumavus ```idiotai.txt``` ir ```genijai.txt``` išvedimo laiką
+I - oji strategija. Iš ```Studentai``` konteinerio duomenis įrašo į ```Genijai```, jei galutinis balas yra >= 5, o į ```Vargšai```, jei galutinis balas yra < 5. ```Studentai``` konteineris išlieka nepakitęs.
+
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.007 s | 0.061 s | 0.613 s  | 15.192 s
+| list         | 0 s      | 0.006 s | 0.058 s | 0.671 s  | 8.414 s
+
+II - oji strategija. 
+
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.005 s | 0.053 s | 0.55 s   | 5.102 s
+| list         | 0 s      | 0.007 s | 0.087 s | 1.014 s  | 8.814 s
+
+III - oji strategija.
+
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.004 s | 0.045 s | 0.493 s  | 4.639 s
+| list         | 0 s      | 0.006 s | 0.061 s | 0.754 s  | 6.428 s
+
   
 - - -
 
@@ -131,5 +159,6 @@ Išvedimo laikas skaičiuojamas susumavus ```idiotai.txt``` ir ```genijai.txt```
 * [v0.2](https://github.com/austejaha/Projektas/tree/v0.2) Pridėta nuskaitymo iš tekstinio failo funkcija. Programa realizuota naudojant ```<vector>``` tipo konteinerį. 
 * [v0.3](https://github.com/austejaha/Projektas/tree/v0.3) Pridėtas išimčių valdymas (angl. Exception Handling). Funkcijos išskirstytos į failus.
 * [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```idiotai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
+* [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```deque```, ```list```). Atlikta ir aprašyta spartos analizė.
 
 
