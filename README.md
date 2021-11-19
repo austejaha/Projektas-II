@@ -11,8 +11,11 @@ Vartotojo paprašoma įvesti:
 * studento egzamino balą (galima sugeneruoti).
 
 Naudojami 2 konteineriai:
+
 * ```vector```;
 * ```list```.
+
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Vartotojas turi galimybę pasirinkti ###
@@ -59,6 +62,7 @@ Programa surūšiuoja studentus pagal **pavardes**.
 
 Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargsai.txt``` ir ```genijai.txt```.
 
+
 Rezultatų išvedimo į failą pavidalas:
 
  ```                                      
@@ -102,24 +106,38 @@ Sistema nutraukia darbą šiais atvejais:
 * AMD Ryzen 5 4500U with Radeon Graphics 2.38 GHz procesorius
 * 8 GB RAM
 * 256 GB SSD
+                   
 
-Konteineris ```vector```:                                    
+Duomenų nuskaitymas
 
-|              |   1000   |  10000   | 1000000 | 10000000 | 10000000
-| ------------ | -------- | -------- | ------- | -------- | --------- 
-| Nuskaitymas  | 0.027 s  | 0.083 s  | 0.726 s | 5.704 s  | 62.679 s
-| Rūšiavimas   | 0 s      | 0.006 s  | 0.046 s | 0.514 s  | 4.86 s
-| Bendras      | 0.027 s  | 0.089 s  | 0.772 s | 6.218 s  | 67.539 s
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0.027 s  | 0.083 s | 0.726 s | 5.704 s  | 62.679 s
+| list         | 0.035 s  | 0.086 s | 0.733 s | 5.956 s  | 44.69 s
+
+Duomenų rūšiavimas
+
+I - oji strategija. Iš ```Studentai``` konteinerio duomenis įrašo į ```Genijai```, jei galutinis balas yra >= 5, o į ```Vargšai```, jei galutinis balas yra < 5. ```Studentai``` konteineris išlieka nepakitęs.
+
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.007 s | 0.061 s | 0.613 s  | 15.192 s
+| list         | 0 s      | 0.006 s | 0.058 s | 0.671 s  | 8.414 s
 
 
-Konteineris ```list```:                                    
+II - oji strategija (**optimizuota**). Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
 
-|              |   1000   |  10000   | 1000000 | 10000000 | 10000000
-| ------------ | -------- | -------- | ------- | -------- | --------- 
-| Nuskaitymas  | 0.035 s  | 0.086 s  | 0.733 s | 5.956 s  | 44.69 s
-| Rūšiavimas   | 0 s      | 0.011 s  | 0.058 s | 0.706 s  | 5.685 s
-| Bendras      | 0.035 s  | 0.097 s  | 0.791 s | 6.662 s  | 50.375 s
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.005 s | 0.053 s | 0.55 s   | 5.102 s
+| list         | 0 s      | 0.007 s | 0.087 s | 1.014 s  | 8.814 s
 
+III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
+
+|              |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| vector       | 0 s      | 0.004 s | 0.045 s | 0.493 s  | 4.639 s
+| list         | 0 s      | 0.006 s | 0.061 s | 0.754 s  | 6.428 s
 
   
 - - -
@@ -143,7 +161,9 @@ Konteineris ```list```:
 * [v0.1](https://github.com/austejaha/Projektas/tree/v0.1) Pirminė programos versija. Programa yra realizuota dviem būdais: naudojant ```C``` tipo masyvą - **masyvas.cpp** ir ```<vector>``` tipo konteinerį - **vektorius.cpp**. 
 * [v0.2](https://github.com/austejaha/Projektas/tree/v0.2) Pridėta nuskaitymo iš tekstinio failo funkcija. Programa realizuota naudojant ```<vector>``` tipo konteinerį. 
 * [v0.3](https://github.com/austejaha/Projektas/tree/v0.3) Pridėtas išimčių valdymas (angl. Exception Handling). Funkcijos išskirstytos į failus.
-* [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Vargsai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```vargsai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
-* [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėtas konteineris ```list```. Atlikta ir aprašyta spartos analizė.
+* [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```vargšai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
+* [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```vector```, ```list```). Atlikta ir aprašyta spartos analizė.
+* [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
+
 
 
