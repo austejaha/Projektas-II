@@ -122,7 +122,7 @@ I - oji strategija. Iš ```Studentai``` konteinerio duomenis įrašo į ```Genij
 | vector       | 0 s      | 0.007 s | 0.061 s | 0.613 s  | 15.192 s
 | list         | 0 s      | 0.006 s | 0.058 s | 0.671 s  | 8.414 s
 
-II - oji strategija (optimizuota). Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
+II - oji strategija (**optimizuota**). Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
 
 |              |   1000   |  10000  | 1000000 | 10000000 | 10000000
 | ------------ | -------- | ------- | ------- | -------- | --------- 
