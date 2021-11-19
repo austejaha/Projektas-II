@@ -122,14 +122,14 @@ I - oji strategija. Iš ```Studentai``` konteinerio duomenis įrašo į ```Genij
 | vector       | 0 s      | 0.007 s | 0.061 s | 0.613 s  | 15.192 s
 | list         | 0 s      | 0.006 s | 0.058 s | 0.671 s  | 8.414 s
 
-II - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
+II - oji strategija (optimizuota). Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
 
 |              |   1000   |  10000  | 1000000 | 10000000 | 10000000
 | ------------ | -------- | ------- | ------- | -------- | --------- 
 | vector       | 0 s      | 0.005 s | 0.053 s | 0.55 s   | 5.102 s
 | list         | 0 s      | 0.007 s | 0.087 s | 1.014 s  | 8.814 s
 
-III - oji strategija. 
+III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
 
 |              |   1000   |  10000  | 1000000 | 10000000 | 10000000
 | ------------ | -------- | ------- | ------- | -------- | --------- 
@@ -159,7 +159,7 @@ III - oji strategija.
 * [v0.2](https://github.com/austejaha/Projektas/tree/v0.2) Pridėta nuskaitymo iš tekstinio failo funkcija. Programa realizuota naudojant ```<vector>``` tipo konteinerį. 
 * [v0.3](https://github.com/austejaha/Projektas/tree/v0.3) Pridėtas išimčių valdymas (angl. Exception Handling). Funkcijos išskirstytos į failus.
 * [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```idiotai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
-* [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```deque```, ```list```). Atlikta ir aprašyta spartos analizė.
+* [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```vector```, ```list```). Atlikta ir aprašyta spartos analizė.
 * [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
 
 
