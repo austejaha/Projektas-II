@@ -16,6 +16,7 @@ Naudojami 2 konteineriai:
 * ```list```.
 
 
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Vartotojas turi galimybę pasirinkti ###
 
@@ -59,7 +60,8 @@ GALUTINĮ BALĄ SKAIČIUOTI NAUDOJANT VIDURKĮ/MEDIANĄ
 
 Programa surūšiuoja studentus pagal **pavardes**.
 
-Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargšai.txt``` ir ```genijai.txt```.
+Programa surūšiuoja studentus į dvi kategorijas: „Vargšai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išveda į du atskirus failus: ```vargsai.txt``` ir ```genijai.txt```.
+
 
 Rezultatų išvedimo į failą pavidalas:
 
@@ -122,6 +124,7 @@ I - oji strategija. Iš ```Studentai``` konteinerio duomenis įrašo į ```Genij
 | vector       | 0 s      | 0.007 s | 0.061 s | 0.613 s  | 15.192 s
 | list         | 0 s      | 0.006 s | 0.058 s | 0.671 s  | 8.414 s
 
+
 II - oji strategija (**optimizuota**). Studentų, kurių galutinis balas yra >= 5, duomenys keliami į ```Genijai``` konteinerį ir ištrinami iš bendro ```Studentai``` konteinerio.
 
 |              |   1000   |  10000  | 1000000 | 10000000 | 10000000
@@ -161,5 +164,6 @@ III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys kelia
 * [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```vargšai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
 * [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```vector```, ```list```). Atlikta ir aprašyta spartos analizė.
 * [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
+
 
 
