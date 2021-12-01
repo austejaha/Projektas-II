@@ -140,7 +140,7 @@ III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys kelia
 | list         | 0 s      | 0.006 s | 0.061 s | 0.754 s  | 6.428 s
 
 
-```struct``` ir ```class``` spartos palyginimas. Pasirinktas ```list``` konteineris ir III - ioji strategija. 
+```struct``` ir ```class``` spartos palyginimas. Pasirinktas ```list``` konteineris ir III - oji strategija. 
 
 | ```list```   |   1000   |  10000  | 1000000 | 10000000 | 10000000
 | ------------ | -------- | ------- | ------- | -------- | --------- 
