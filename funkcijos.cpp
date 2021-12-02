@@ -145,7 +145,7 @@ void pagalbine(vector <studentas> &St)
     
 }
 
-bool patvirtinimas() //+
+bool patvirtinimas() 
 {
     bool tiesa = true;
     bool laik = true;
@@ -171,7 +171,7 @@ bool patvirtinimas() //+
     return tiesa;
 }
 
-bool vardTikrinimas(string kint) //+
+bool vardTikrinimas(string kint) 
 {
     bool teisingas = true;
 
@@ -189,7 +189,7 @@ bool vardTikrinimas(string kint) //+
     return teisingas;
 }
 
-string vardIvedimas(string ivedimas) //+
+string vardIvedimas(string ivedimas) 
 {
     string kint;
 
@@ -202,7 +202,7 @@ string vardIvedimas(string ivedimas) //+
     return kint;
 }
 
-bool skKiekioTikrinimas(string laik) //+
+bool skKiekioTikrinimas(string laik) 
 {
     bool teisingas = true;
 
@@ -219,7 +219,7 @@ bool skKiekioTikrinimas(string laik) //+
     return teisingas;
 }
 
-bool skTikrinimas(string laik) //+
+bool skTikrinimas(string laik) 
 {
     bool teisingas = true;
 
@@ -242,7 +242,7 @@ bool skTikrinimas(string laik) //+
     return teisingas;
 }
 
-int skIvedimas(string ivedimas, bool tarpinis) //+
+int skIvedimas(string ivedimas, bool tarpinis) 
 {
     string kint;
     bool laik;
@@ -260,12 +260,12 @@ int skIvedimas(string ivedimas, bool tarpinis) //+
     return skaicius;
 }
 
-int suma(vector <int> nd) //+?
+int suma(vector <int> nd) 
 {
     return accumulate(nd.begin(), nd.end(), 0);
 }
 
-float vidurkis(vector <int> nd) //+?
+float vidurkis(vector <int> nd) 
 {
     int n = nd.size();
 
@@ -274,7 +274,7 @@ float vidurkis(vector <int> nd) //+?
     return vid;
 }
 
-float mediana(vector <int> nd) //+?
+float mediana(vector <int> nd) 
 {
     float median;
     int n = nd.size();
@@ -296,7 +296,7 @@ float galutinis(float sum, int egz)
     return glt;
 }
 
-int atsitiktiniai() //+
+int atsitiktiniai() 
 {
     int paz;
     paz = 1 + rand() % ((10 + 1) - 1);
@@ -331,13 +331,13 @@ int ilgVardas(vector <studentas> St)
     return max;
 }
 
-void rikiavimas(vector <studentas> &St) //+
+void rikiavimas(vector <studentas> &St) 
 {
     sort(St.begin(), St.end(), lyginimasPavard());
 }
 
 
-void spausdinimas(vector <studentas> St, string failas) //+
+void spausdinimas(vector <studentas> St, string failas) 
 {
     rikiavimas(St);
     ofstream out (failas);
@@ -358,7 +358,7 @@ void spausdinimas(vector <studentas> St, string failas) //+
 
 }
 
-int pasirinkimas() //+
+int pasirinkimas() 
 {
     cout << "Kuri faila norite naudoti? (1 - 5)" << endl;
     cout << "1 - studentai1000.txt; " << endl << "2 - studentai10000.txt;" << endl << "3 - studentai100000.txt;" 
@@ -368,7 +368,7 @@ int pasirinkimas() //+
 }
 
 
-bool skGenTikrinimas(string laik) //+
+bool skGenTikrinimas(string laik) 
 {
     bool teisingas = true;
 
@@ -391,7 +391,7 @@ bool skGenTikrinimas(string laik) //+
     return teisingas;
 }
 
-int skIvedimas() //+
+int skIvedimas() 
 {
     string kint;
     bool laik;
@@ -407,7 +407,7 @@ int skIvedimas() //+
     return skaicius;
 }
 
-void generavimas(int sk, string &failas) //+
+void generavimas(int sk, string &failas) 
 {
     long n;
     if(sk == 1) n = 1000;
@@ -436,7 +436,7 @@ void generavimas(int sk, string &failas) //+
 
 }
 
-void skirstymas1(vector <studentas> St, vector <studentas> &Vargsai, vector <studentas> &Genijai) // + i du atskirus, originalus nepakitesą
+void skirstymas1(vector <studentas> St, vector <studentas> &Vargsai, vector <studentas> &Genijai) // i du atskirus, originalus nepakitesą
 {
     pradzia = std::chrono::steady_clock::now();
 
@@ -447,7 +447,7 @@ void skirstymas1(vector <studentas> St, vector <studentas> &Vargsai, vector <stu
     cout << endl <<"Sugaistas laikas studentams suskirstyti (1 - oji strategija): " << pabaiga << " s" << endl << endl;  
 }
 
-void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai) //+
+void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai)
 {
     pradzia = std::chrono::steady_clock::now();  
 
@@ -459,7 +459,7 @@ void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai) //+
     cout << endl <<"Sugaistas laikas studentams suskirstyti (2 - oji optimizuota strategija): " << pabaiga << " s" << endl << endl;    
 }
 
-void skirstymas3(vector <studentas> &St, vector <studentas> &Genijai) //+
+void skirstymas3(vector <studentas> &St, vector <studentas> &Genijai) 
 {
     long int n = St.size();
     pradzia = std::chrono::steady_clock::now();
