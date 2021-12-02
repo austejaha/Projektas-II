@@ -139,6 +139,16 @@ III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys kelia
 | vector       | 0 s      | 0.004 s | 0.045 s | 0.493 s  | 4.639 s
 | list         | 0 s      | 0.006 s | 0.061 s | 0.754 s  | 6.428 s
 
+
+```struct``` ir ```class``` spartos palyginimas. Pasirinktas ```list``` konteineris ir III - oji strategija. 
+
+| ```list```   |   1000   |  10000  | 1000000 | 10000000 | 10000000
+| ------------ | -------- | ------- | ------- | -------- | --------- 
+| ```struct``` | 0 s      | 0.006 s | 0.061 s | 0.754 s  | 6.428 s
+| ```class```  | 0 s      | 0.009 s | 0.062 s | 0.745 s  | 12.072 s
+| ```O1```     | 0 s      | 0.004 s | 0.035 s | 0.268 s  | 3.919 s
+| ```O2```     | 0 s      | 0.002 s | 0.028 s | 0.257 s  | 2.581 s
+| ```O3```     | 0 s      | 0.003 s | 0.028 s | 0.254 s  | 2.576 s
   
 - - -
 
@@ -164,6 +174,7 @@ III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys kelia
 * [v0.4](https://github.com/austejaha/Projektas/tree/v0.4) Sukurta funkcija, kuri generuoja atsitiktinius studentų sąrašų failus (1 000, 10 000, 100 000, 1 000 000, 10 000 000 įrašų). Pridėtas studentų surūšiavimas į dvi kategorijas: „Idiotai" (**galutinis balas < 5.0**) ir „Genijai" (**galutinis balas >= 5.0**), ir išvedimas į du atskirus failus: ```vargšai.txt``` ir ```genijai.txt```. Atlikta programos veikimo greičio (spartos) analizė.
 * [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```vector```, ```list```). Atlikta ir aprašyta spartos analizė.
 * [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
+* [v1.1](https://github.com/austejaha/Projektas-II/tree/v1.1) Struktūra pakeista į klasę, atnaujinta spartos analizė.
 
 
 
