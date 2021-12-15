@@ -1,11 +1,18 @@
+/**
+* @file funkcijos.cpp
+* Vektoriaus funkciju failas. Aprasytos pagrindines funkcijos, padedancios suskaiciuoti studentu galutini bala, suskirstyti juos ir kt. 
+*/
+
 #include "funkcijos.h"
 
+/**
+* Funkcija skirta apskaiciuoti galutini studento bala naudojant vidurki arba mediana.
+*/
 void vidMed(vector <studentas> &St)
 {
     cout << "Ar norite apskaiciuoti vidurki (kitu atveju bus skaiciuojama mediana)? (t/n) ";
     long dydis = St.size();
-    if(true)
-    //patvirtinimas()
+    if(patvirtinimas())
     { 
         for(auto &a: St)
         {
@@ -21,6 +28,9 @@ void vidMed(vector <studentas> &St)
     }
 }
 
+/**
+* Funkcija skirta nuskaityti duomenis is failo.
+*/
 void nuskaitymas(vector <studentas> &St, string failas)
 {
     stringstream buffer;
@@ -82,6 +92,9 @@ void nuskaitymas(vector <studentas> &St, string failas)
 
 }
 
+/**
+* Pagabine funkcija.
+*/
 void pagalbine(vector <studentas> &St)
 {
     studentas S;
@@ -145,6 +158,9 @@ void pagalbine(vector <studentas> &St)
     
 }
 
+/**
+* Funkcija skirta tikrinti pasirinkima (t/n) - taip/ne.
+*/
 bool patvirtinimas() 
 {
     bool tiesa = true;
@@ -171,6 +187,9 @@ bool patvirtinimas()
     return tiesa;
 }
 
+/**
+* Funkcija skirta tikrinti ar ivesta varda/pavarde sudaro tik raides.
+*/
 bool vardTikrinimas(string kint) 
 {
     bool teisingas = true;
@@ -189,6 +208,9 @@ bool vardTikrinimas(string kint)
     return teisingas;
 }
 
+/**
+* Funkcija skirta tikrinti ar duomenys ivesti teisingai.
+*/
 string vardIvedimas(string ivedimas) 
 {
     string kint;
@@ -202,6 +224,9 @@ string vardIvedimas(string ivedimas)
     return kint;
 }
 
+/**
+* Funkcija skirta tikrinti ar ivestas skaicius.
+*/
 bool skKiekioTikrinimas(string laik) 
 {
     bool teisingas = true;
@@ -219,6 +244,9 @@ bool skKiekioTikrinimas(string laik)
     return teisingas;
 }
 
+/**
+* Funkcija skirta tikrinti ar ivestas skaicius ir ar jis priklauso intervalui [1 - 10].
+*/
 bool skTikrinimas(string laik) 
 {
     bool teisingas = true;
@@ -242,6 +270,9 @@ bool skTikrinimas(string laik)
     return teisingas;
 }
 
+/**
+* Funkcija skirta duomenu ivedimui (jei jie neteisingi - prasoma ivesti is naujo).
+*/
 int skIvedimas(string ivedimas, bool tarpinis) 
 {
     string kint;
@@ -260,11 +291,17 @@ int skIvedimas(string ivedimas, bool tarpinis)
     return skaicius;
 }
 
+/**
+* Funkcija skirta apskaiciuoti namu darbu pazymiu suma.
+*/
 int suma(vector <int> nd) 
 {
     return accumulate(nd.begin(), nd.end(), 0);
 }
 
+/**
+* Funkcija skirta apskaiciuoti namu darbu pazymiu vidurki.
+*/
 float vidurkis(vector <int> nd) 
 {
     int n = nd.size();
@@ -274,6 +311,9 @@ float vidurkis(vector <int> nd)
     return vid;
 }
 
+/**
+* Funkcija skirta apskaiciuoti namu darbu pazymiu mediana.
+*/
 float mediana(vector <int> nd) 
 {
     float median;
@@ -289,6 +329,9 @@ float mediana(vector <int> nd)
     return median;
 }
 
+/**
+* Funkcija skirta apskaiciuoti galutini bala.
+*/
 float galutinis(float sum, int egz) 
 {
     float glt = float(0.4 * sum) + 0.6 * egz;
@@ -296,13 +339,19 @@ float galutinis(float sum, int egz)
     return glt;
 }
 
-int atsitiktiniai() 
+/**
+* Funkcija skirta atsitiktiniu duomenu generavimui.
+*/
+int atsitiktiniai()
 {
     int paz;
     paz = 1 + rand() % ((10 + 1) - 1);
     return paz;
 }
 
+/**
+* Funkcija skirta rasti ilgiausia studento pavarde.
+*/
 int ilgPavarde(vector <studentas> St)
 {
     int max = 0;
@@ -317,6 +366,9 @@ int ilgPavarde(vector <studentas> St)
     return max;
 }
 
+/**
+* Funkcija skirta rasti ilgiausia studento varda.
+*/
 int ilgVardas(vector <studentas> St)
 {
     int max = 0;
@@ -331,12 +383,17 @@ int ilgVardas(vector <studentas> St)
     return max;
 }
 
+/**
+* Funkcija skirta isrikiuoti studentus pagal ju pavardes.
+*/
 void rikiavimas(vector <studentas> &St) 
 {
     sort(St.begin(), St.end(), lyginimasPavard());
 }
 
-
+/**
+* Funkcija skirta duomenims isspausdinti.
+*/
 void spausdinimas(vector <studentas> St, string failas) 
 {
     rikiavimas(St);
@@ -358,6 +415,9 @@ void spausdinimas(vector <studentas> St, string failas)
 
 }
 
+/**
+* Funkcija skirta pasirinkti kokio dydzio failas bus sugeneruotas.
+*/
 int pasirinkimas() 
 {
     cout << "Kuri faila norite naudoti? (1 - 5)" << endl;
@@ -367,7 +427,9 @@ int pasirinkimas()
     return skaicius;
 }
 
-
+/**
+* Funkcija skirta tikrinti failo generavimui ivesta skaiciu.
+*/
 bool skGenTikrinimas(string laik) 
 {
     bool teisingas = true;
@@ -391,6 +453,9 @@ bool skGenTikrinimas(string laik)
     return teisingas;
 }
 
+/**
+* Funkcija skirta duomenu ivedimui (jei jie neteisingi - prasoma ivesti is naujo).
+*/
 int skIvedimas() 
 {
     string kint;
@@ -407,6 +472,9 @@ int skIvedimas()
     return skaicius;
 }
 
+/**
+* Funkcija skirta generuoti failus.
+*/
 void generavimas(int sk, string &failas) 
 {
     long n;
@@ -436,6 +504,9 @@ void generavimas(int sk, string &failas)
 
 }
 
+/**
+* Funkcija skirta suskirstyti studentus pagal ju galutini bala, naudojant I - aja strategija.
+*/
 void skirstymas1(vector <studentas> St, vector <studentas> &Vargsai, vector <studentas> &Genijai) // i du atskirus, originalus nepakitesą
 {
     pradzia = std::chrono::steady_clock::now();
@@ -447,7 +518,10 @@ void skirstymas1(vector <studentas> St, vector <studentas> &Vargsai, vector <stu
     cout << endl <<"Sugaistas laikas studentams suskirstyti (1 - oji strategija): " << pabaiga << " s" << endl << endl;  
 }
 
-void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai)
+/**
+* Funkcija skirta suskirstyti studentus pagal ju galutini bala, naudojant II - aja strategija.
+*/
+void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai) 
 {
     pradzia = std::chrono::steady_clock::now();  
 
@@ -459,6 +533,9 @@ void skirstymas2(vector <studentas> &St, vector <studentas> &Genijai)
     cout << endl <<"Sugaistas laikas studentams suskirstyti (2 - oji optimizuota strategija): " << pabaiga << " s" << endl << endl;    
 }
 
+/**
+* Funkcija skirta suskirstyti studentus pagal ju galutini bala, naudojant III - aja strategija.
+*/
 void skirstymas3(vector <studentas> &St, vector <studentas> &Genijai) 
 {
     long int n = St.size();
