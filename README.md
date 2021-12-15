@@ -175,8 +175,8 @@ III - oji strategija. Studentų, kurių galutinis balas yra >= 5, duomenys kelia
 * [v0.5](https://github.com/austejaha/Projektas/tree/v0.5) Pridėta galimybė pasirinkti norimą konteinerį (```vector```, ```list```). Atlikta ir aprašyta spartos analizė.
 * [v1.0](https://github.com/austejaha/Projektas/tree/v1.0) Pridėta galimybė pasirinkti norimą grupavimo strategiją. Atlikta šių strategijų spartos analizė. Pridėtas CMakeLists.txt
 * [v1.1](https://github.com/austejaha/Projektas-II/tree/v1.1) Struktūra pakeista į klasę, atnaujinta spartos analizė.
-* [v1.2](https://github.com/austejaha/Projektas-II/tree/v1.2) Realizuota „Rule of three".
-* [v1.5](https://github.com/austejaha/Projektas-II/tree/v1.5) Sukurtos dvi klasės: bazinė: ```zmogus``` ir išvestinė: ```studentas```.
+* [v1.2](https://github.com/austejaha/Projektas-II/tree/v1.2) Realizuota **„Rule of three"**.
+* [v1.5](https://github.com/austejaha/Projektas-II/tree/v1.5) Sukurtos dvi klasės: **bazinė**: ```zmogus``` ir **išvestinė**: ```studentas```.
 
 
 
